@@ -1,0 +1,382 @@
+:root {
+  --title-text-color: #212121;
+  --description-text-color: #757575;
+  --contact-text-color: #2196f3;
+  --connect-text-color: #757575;
+  --web-logo-color: #2196f3;
+  --studio-logo-color-headers: #000000;
+  --studio-logo-color-footers: #ffffff;
+  --color-contact-footers: #ffffff;
+  --background-hero-color: #2f303a;
+  --hero-title-color: #ffffff;
+  --footers-background-color: #2f303a;
+  --button-background-color: #2196f3;
+  --button-text-color: #ffffff;
+  --color-box: #eeeeee;
+  --color-border-header: #ececec;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}
+.conteiner {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+/* ul и li это идеальное место для использования display-flex */
+/* для карточек использовать формулу flex-basis(есть в тетрадке (2:00) */
+/* карточки(а конкретнее текст карточек) можно обьеденить в div и раздать им падинги в верх и в низ и т д (2:07) */
+/* ЛОГОТИП --------------------------------------------*/
+.logo-web {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--web-logo-color);
+  padding-top: 16px;
+  padding-bottom: 15px;
+}
+.logo-headers {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--studio-logo-color-headers);
+}
+.logo-footers {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--studio-logo-color-footers);
+}
+.logo-conteiner {
+  margin-bottom: 10px;
+}
+.page-header {
+  display: flex;
+  align-items: center;
+}
+/*  HEADER---------------------------------------------- */
+.header-conteiner {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-header);
+}
+.header-contact {
+  display: flex;
+  margin-left: 93px;
+  align-items: center;
+}
+.header-contact .item:not(:last-child) {
+  margin-right: 50px;
+}
+.contact-headers {
+  display: block; /* в этом блоке нужно применить padding поэтому и ставим display block*/
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.header-connect {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.header-connect .item + .item {
+  margin-left: 50px;
+}
+.connect-headers {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--connect-text-color);
+}
+.header-contact .current {
+  color: var(--button-background-color);
+}
+.connect-headers:focus,
+.contact-headers:hover {
+  color: var(--contact-text-color);
+}
+.connect-headers:focus,
+.connect-headers:hover {
+  color: var(--contact-text-color);
+}
+/* ГЕРОЙ -------------------------------------------------*/
+.conteiner-hero {
+  background-color: var(--background-hero-color);
+}
+.hero-title {
+  margin: 0 auto 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  width: 700px;
+  letter-spacing: 0.06em;
+  color: var(--hero-title-color);
+  text-transform: uppercase;
+}
+.hero-wrap {
+  margin: 0 auto;
+  text-align: center;
+  width: 1200px;
+  padding: 200px 15px;
+}
+.hero-button {
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.hero-button:focus {
+  color: var(--button-text-color);
+  background-color: var(--button-background-color);
+}
+.hero-button {
+  cursor: pointer;
+}
+/* КОНТАКТЫ ---------------------------------------------*/
+.benefits-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.benefits-description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--description-text-color);
+}
+.benefits-conteiner {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+.benefits {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.benefits .item {
+  flex-basis: calc(100% / 4);
+  margin-right: 30px;
+}
+.benefits .item:last-child {
+  margin-right: 0;
+}
+.benefits-title {
+  margin-bottom: 10px;
+}
+/* ЧЕМ МЫ ЗАНИМАЕМСЯ -------------------------------------- */
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.photo-gallery .item:not(:last-child) {
+  margin-right: 30px;
+}
+.works-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  margin-bottom: 50px;
+}
+/* Заголовки и параграфы ----------------------------------*/
+.works-conteiner {
+  padding-bottom: 95px;
+}
+.team-conteiner {
+  padding-bottom: 95px;
+  padding-top: 95px;
+}
+.team {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.team-item {
+  box-shadow: 0px 1px 3px rgba(190, 164, 164, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  margin-bottom: 50px;
+}
+.team-member {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+.team-member {
+  margin-bottom: 10px;
+}
+.team-description {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: var(--description-text-color);
+}
+.box-team {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 30px 59px;
+}
+/* Портфолио--------------------------------------------- */
+.button-item:focus,
+.button-item:hover {
+  color: var(--button-text-color);
+  background-color: var(--button-background-color);
+}
+.button-item {
+  cursor: pointer;
+  padding: 6px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  border: none;
+}
+.button-list {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 50px;
+}
+.btn-portfolio:not(:last-child) {
+  margin-right: 8px;
+}
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.item-potf {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.portfolio-conteiner {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.project-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+}
+.project-description {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--description-text-color);
+}
+.box-portfolio {
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
+}
+/* FOOTER------------------------------------------------ */
+.contact-footers {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--color-contact-footers);
+}
+.footers-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.connect-footers {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--connect-text-color);
+}
+.footer-contact .current {
+  color: var(--button-background-color);
+}
+.contact-footers:focus,
+.contact-footers:hover {
+  color: var(--contact-text-color);
+}
+.connect-footers:focus,
+.connect-footers:hover {
+  color: var(--contact-text-color);
+}
+.footer-background {
+  background-color: var(--footers-background-color);
+}
+.footers-wrap {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
